@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  id-token: write
+  contents: write
+
 jobs:
   install:
     runs-on: ubuntu-latest
@@ -108,7 +112,6 @@ jobs:
       - uses: './.github/actions/release'
         with:
           gh_token: ${{ secrets.GITHUB_TOKEN }}
-          npm_token: ${{ secrets.NPM_TOKEN }}
           gh_name: ${{ secrets.GH_NAME }}
           gh_email: ${{ secrets.GH_EMAIL }}
 

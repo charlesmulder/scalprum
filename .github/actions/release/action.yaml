@@ -1,9 +1,6 @@
 name: Release job
 description: build affected packages and publish them to npm
 inputs:
-  npm_token:
-    description: 'NPM token'
-    required: true
   gh_token:
     description: 'Github token'
     required: true
@@ -19,7 +16,8 @@ runs:
     - name: Use Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version-file: '.nvmrc'
+        registry-url: 'https://registry.npmjs.org'
     - uses: './.github/actions/node-cache'
     - name: Install deps
       shell: bash
@@ -32,18 +30,14 @@ runs:
     - name: Build
       shell: bash
       run: npx nx run-many -t build
-    - name: Set npm auth
-      env:
-        NPM_TOKEN: ${{ inputs.npm_token }}
-      shell: bash
-      run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
     - name: Release (Version, Changelog, Publish to npm and GitHub)
       shell: bash
       env:
         GH_TOKEN: ${{ inputs.gh_token }}
         GITHUB_TOKEN: ${{ inputs.gh_token }}
-        NODE_AUTH_TOKEN: ${{ inputs.npm_token }}
-        # force NX to not use legacy peer deps handling
+        # Disable legacy peer deps to ensure proper dependency resolution
+        # See: https://github.com/nrwl/nx/issues/22066#issuecomment-2576366862
+        # See: https://github.com/nrwl/nx/blob/5ea2e47acfa9d175546daa922ce40905533f1074/packages/nx/src/utils/package-manager.ts#L207-L213
         npm_config_legacy_peer_deps: false
       run: |
         npx nx release version
