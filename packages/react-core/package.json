@@ -8,6 +8,9 @@
   "repository": "https://github.com/scalprum/scaffloding.git",
   "author": "Martin Marosi <marvusm.mmi@gmail.com>",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {},
   "devDependencies": {
     "@types/react": "^18.3.0",
