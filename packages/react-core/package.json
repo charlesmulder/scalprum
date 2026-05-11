@@ -5,7 +5,7 @@
   "main": "./index.js",
   "module": "./esm/index.js",
   "typings": "./index.d.ts",
-  "repository": "https://github.com/scalprum/scaffloding.git",
+  "repository": "https://github.com/scalprum/scaffolding.git",
   "author": "Martin Marosi <marvusm.mmi@gmail.com>",
   "license": "Apache-2.0",
   "publishConfig": {
