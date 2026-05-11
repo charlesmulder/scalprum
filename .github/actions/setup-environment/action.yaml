@@ -12,11 +12,10 @@ runs:
       with:
         node-version-file: '.nvmrc'
         registry-url: ${{ inputs.registry-url }}
-    - name: Update npm for trusted publishing support
+    - name: Install npm 11.14.1
       shell: bash
       run: |
         npm install -g npm@11.14.1
-        echo "=== npm version (after upgrade) ==="
         npm --version
     - uses: nrwl/nx-set-shas@v4
     - uses: './.github/actions/node-cache'
