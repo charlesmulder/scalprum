@@ -73,7 +73,7 @@ Documentation is organized within individual package directories, following mono
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/en/download/) 16+
+- [Node.js](https://nodejs.org/en/download/) 20+ with npm 11.14.1+
 - Build environment with Webpack 5, Rspack, or Module Federation Runtime support
 - React 16.8+ (for hooks support)
 
@@ -177,6 +177,32 @@ import { ScalprumComponent } from '@scalprum/react-core';
 ## Contributing
 
 We welcome contributions to Scalprum! Whether it's bug reports, feature requests, or code contributions, your help makes this project better.
+
+### Development Setup
+
+This project requires Node.js 20+ with npm 11.14.1+ for npm OIDC trusted publishing support.
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/scalprum/scaffolding.git
+   cd scaffolding
+   ```
+
+2. **Setup Node.js and npm:**
+   ```bash
+   nvm use              # Install/use Node 20 from .nvmrc
+   corepack enable      # Enable npm 11.14.1 via packageManager field
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+4. **Run tests:**
+   ```bash
+   npm test
+   ```
 
 ### How to Contribute
 

@@ -13,28 +13,9 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Use Node.js
-      uses: actions/setup-node@v4
+    - uses: './.github/actions/setup-environment'
       with:
-        node-version-file: '.nvmrc'
         registry-url: 'https://registry.npmjs.org'
-    - name: Show node/npm versions
-      shell: bash
-      run: |
-        echo "=== Node.js version ==="
-        node --version
-        echo "=== npm version (before upgrade) ==="
-        npm --version
-    - name: Update npm for trusted publishing support
-      shell: bash
-      run: |
-        npm install -g npm@11
-        echo "=== npm version (after upgrade) ==="
-        npm --version
-    - uses: './.github/actions/node-cache'
-    - name: Install deps
-      shell: bash
-      run: npm ci
     - name: git config
       shell: bash
       run: |
