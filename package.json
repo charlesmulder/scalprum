@@ -2,6 +2,12 @@
   "name": "@scalprum/source",
   "version": "1.0.6",
   "license": "MIT",
+  "private": true,
+  "packageManager": "npm@11.14.1",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=11.14.1"
+  },
   "workspaces": [
     "packages/*"
   ],
@@ -18,12 +24,6 @@
     "lint": "nx run-many -t lint",
     "typecheck": "nx run-many -t typecheck",
     "postinstall": "rm -rf .webpack-cache"
-  },
-  "private": true,
-  "packageManager": "npm@11.14.1",
-  "engines": {
-    "node": ">=20.0.0",
-    "npm": ">=11.14.1"
   },
   "dependencies": {
     "@emotion/react": "11.11.1",

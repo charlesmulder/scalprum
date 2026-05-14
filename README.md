@@ -191,7 +191,7 @@ This project requires Node.js 20+ with npm 11.14.1+ for npm OIDC trusted publish
 2. **Setup Node.js and npm:**
    ```bash
    nvm use              # Install/use Node 20 from .nvmrc
-   corepack enable      # Enable npm 11.14.1 via packageManager field
+   corepack enable npm     # Enable npm 11.14.1 via packageManager field
    ```
 
 3. **Install dependencies:**
