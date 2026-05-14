@@ -17,10 +17,11 @@ Before running any npm commands:
 
 2. **Enable corepack** (one-time):
    ```bash
-   corepack enable
+   corepack enable npm
    ```
    
    This allows npm 11.14.1 to be used automatically via the `packageManager` field without affecting global npm.
+   `corepack enable` only enables yarn and pnpm by default. npm shims excluded because npm ships with Node.js separately.
 
 ## Why npm 11.14.1?
 
