@@ -59,6 +59,12 @@ const withWebpackCache = (config: Configuration, { context }: NxWebpackExecution
       type: 'filesystem',
       cacheDirectory: join(context.root, '.webpack-cache'),
     },
+    resolve: {
+      alias: {
+        '@scalprum/core': join(context.root, 'dist/packages/core'),
+        '@scalprum/react-core': join(context.root, 'dist/packages/react-core'),
+      },
+    },
   });
 };
 
