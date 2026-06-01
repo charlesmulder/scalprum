@@ -6,13 +6,10 @@
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
         "@typescript-eslint/no-explicit-any": "warn",
-        "@typescript-eslint/ban-types": [
+        "@typescript-eslint/no-empty-object-type": [
           "error",
           {
-            "types": {
-              "{}": false
-            },
-            "extendDefaults": true
+            "allowObjectTypes": "always"
           }
         ]
       }
