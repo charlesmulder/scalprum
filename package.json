@@ -8,6 +8,9 @@
     "node": ">=20.0.0",
     "npm": ">=11.14.1"
   },
+  "overrides": {
+    "@rspack/core": "2.0.8"
+  },
   "workspaces": [
     "packages/*"
   ],
@@ -31,7 +34,8 @@
     "@mui/icons-material": "^5.14.19",
     "@mui/material": "^5.14.19",
     "@nx/devkit": "22.7.5",
-    "@openshift/dynamic-plugin-sdk-webpack": "^4.1.0",
+    "@openshift/dynamic-plugin-sdk": "^8.0.0",
+    "@openshift/dynamic-plugin-sdk-webpack": "^5.0.0",
     "@swc/helpers": "^0.5.22",
     "concurrently": "^8.2.2",
     "eslint-plugin-prettier": "^5.0.1",
