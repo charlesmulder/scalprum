@@ -33,7 +33,7 @@ export function useLoadModule<T>(
         }
       } else {
         try {
-          pluginStore.getExposedModule<ExposedScalprumModule>(scope, module).then((Module) => {
+          pluginStore.getExposedModule<ExposedScalprumModule>(scope, module).then((Module: ExposedScalprumModule) => {
             setData(() => Module[importName || 'default']);
           });
         } catch (e) {

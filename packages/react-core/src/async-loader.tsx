@@ -14,6 +14,9 @@ export async function loadComponent<P = {}>(
     if (!mod) {
       mod = await pluginStore.getExposedModule<ExposedScalprumModule>(scope, module);
     }
+    if (!mod) {
+      throw new Error(`Failed to load module "${module}" from scope "${scope}"`);
+    }
     return {
       prefetch: mod.prefetch,
       component: mod[importName],

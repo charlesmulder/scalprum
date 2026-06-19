@@ -13,11 +13,12 @@
   },
   "scripts": {},
   "devDependencies": {
+    "@types/lodash": "^4.17.0",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0"
   },
   "dependencies": {
-    "@openshift/dynamic-plugin-sdk": "^5.0.1",
+    "@openshift/dynamic-plugin-sdk": "^8.0.0",
     "@scalprum/core": "^0.9.1",
     "lodash": "^4.17.0"
   },

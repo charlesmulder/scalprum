@@ -13,7 +13,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@openshift/dynamic-plugin-sdk": "^5.0.1",
+    "@openshift/dynamic-plugin-sdk": "^8.0.0",
     "tslib": "^2.6.2"
   }
 }
