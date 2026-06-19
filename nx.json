@@ -85,6 +85,7 @@
       "preVersionCommand": "npx nx run-many -t build",
       "conventionalCommits": true,
       "preserveLocalDependencyProtocols": false,
+      "preserveMatchingDependencyRanges": false,
       "versionActionsOptions": {
         "skipLockFileUpdate": false
       }
