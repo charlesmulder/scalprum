@@ -106,9 +106,7 @@
         }
       }
     },
-    "releaseTag": {
-      "pattern": "{projectName}-{version}"
-    }
+    "releaseTagPattern": "{projectName}-{version}"
   },
   "analytics": false
 }

@@ -22,11 +22,11 @@ export type ScalprumComponentProps<API extends Record<string, any> = {}, Props e
   scope: string;
   module: string;
   importName?: string;
-  ErrorComponent?: React.ReactElement;
   /**
    * Forwarded to remote component for internal loading states.
    * Not consumed by ScalprumComponent - use `fallback` for module loading UI.
    */
+  ErrorComponent?: React.ReactElement<any>;
   LoadingComponent?: React.ComponentType;
   innerRef?: React.Ref<unknown>;
   processor?: (item: any) => string[];
