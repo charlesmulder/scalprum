@@ -44,7 +44,7 @@ function baseTransformPluginManifest<T extends PluginManifest>(manifest: T): T {
 
 export function ScalprumProvider<T extends Record<string, any> = Record<string, any>>(
   props: ScalprumProviderProps<T>,
-): React.ReactElement | React.ReactElement {
+): React.ReactElement<any> {
   const state: Scalprum<T> = useMemo(() => {
     if (isInstanceProps(props)) {
       return props.scalprum;
