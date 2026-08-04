@@ -73,7 +73,7 @@ Documentation is organized within individual package directories, following mono
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/en/download/) 20+ with npm 11.14.1+
+- [Node.js](https://nodejs.org/en/download/) 24+
 - Build environment with Webpack 5, Rspack, or Module Federation Runtime support
 - React 16.8+ (for hooks support)
 
@@ -180,7 +180,7 @@ We welcome contributions to Scalprum! Whether it's bug reports, feature requests
 
 ### Development Setup
 
-This project requires Node.js 20+ with npm 11.14.1+ for npm OIDC trusted publishing support.
+This project requires Node.js 24+.
 
 1. **Clone the repository:**
    ```bash
@@ -188,10 +188,9 @@ This project requires Node.js 20+ with npm 11.14.1+ for npm OIDC trusted publish
    cd scaffolding
    ```
 
-2. **Setup Node.js and npm:**
+2. **Setup Node.js:**
    ```bash
-   nvm use              # Install/use Node 20 from .nvmrc
-   corepack enable npm     # Enable npm 11.14.1 via packageManager field
+   nvm use              # Install/use Node 24 from .nvmrc
    ```
 
 3. **Install dependencies:**
