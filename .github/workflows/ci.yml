@@ -24,6 +24,8 @@ jobs:
         with:
           fetch-depth: 0
       - uses: './.github/actions/setup-environment'
+      - name: Test commitlint config
+        run: npx jest --config=commitlint.jest.config.js
       - name: Validate current commit (last commit) with commitlint
         if: github.event_name == 'push'
         run: npx commitlint --last --verbose
