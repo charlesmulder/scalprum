@@ -75,6 +75,9 @@
   "release": {
     "projects": ["@scalprum/core", "@scalprum/react-core", "@scalprum/react-test-utils"],
     "projectsRelationship": "independent",
+    "conventionalCommits": {
+      "useCommitScope": true
+    },
     "version": {
       "git": {
         "commit": true,
