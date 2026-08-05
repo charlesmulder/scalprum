@@ -13,7 +13,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@openshift/dynamic-plugin-sdk": "^8.0.0",
+    "@openshift/dynamic-plugin-sdk": "^9.1.0",
     "@scalprum/core": "^0.10.2",
     "@scalprum/react-core": "^0.13.2",
     "tslib": "^2.6.2",
