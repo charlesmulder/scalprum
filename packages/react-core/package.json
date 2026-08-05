@@ -18,7 +18,7 @@
     "@types/react-dom": "^18.3.0"
   },
   "dependencies": {
-    "@openshift/dynamic-plugin-sdk": "^8.0.0",
+    "@openshift/dynamic-plugin-sdk": "^9.1.0",
     "@scalprum/core": "^0.10.2",
     "lodash": "^4.17.0"
   },
